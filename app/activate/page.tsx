@@ -14,6 +14,13 @@ export default function ActivatePage() {
   const [error, setError] = useState('')
 
   async function validateKey() {
+    // TEMP BYPASS FOR TESTING - remove before launch
+    if (licenseKey === 'TEST-1234') {
+      setEmail('test@pulse.com')
+      setStep('account')
+      return
+    }
+    
     setLoading(true); setError('')
     try {
       const res = await fetch('/api/validate-key', {
