@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
-import { Sidebar } from '../log/page'
+import { Sidebar } from '@/components/Sidebar'
 import Cursor from '@/components/Cursor'
 
 interface Message { role: 'user' | 'assistant'; content: string; timestamp: Date }

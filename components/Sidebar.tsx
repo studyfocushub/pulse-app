@@ -19,12 +19,21 @@ export function Sidebar({ active }: { active: string }) {
         <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 18, color: '#c4728a' }}>Pulse</span>
       </div>
       {links.map(({ href, label, icon }) => (
-        <Link key={href} href={href} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 12, fontSize: 13.5, textDecoration: 'none', transition: 'all 0.2s', background: active === href ? 'var(--pink-light)' : 'transparent', color: active === href ? '#c4728a' : 'var(--text-mid)', fontWeight: active === href ? 500 : 400 }}>
+        <Link key={href} href={href} style={{
+          display: 'flex', alignItems: 'center', gap: 10,
+          padding: '10px 14px', borderRadius: 12,
+          fontSize: 13.5, textDecoration: 'none', transition: 'all 0.2s',
+          background: active === href ? 'var(--pink-light)' : 'transparent',
+          color: active === href ? '#c4728a' : 'var(--text-mid)',
+          fontWeight: active === href ? 500 : 400,
+        }}>
           <span>{icon}</span> {label}
         </Link>
       ))}
       <div style={{ marginTop: 'auto', paddingTop: 20, borderTop: '1px solid var(--pink-border)' }}>
-        <Link href="/settings" style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 12, fontSize: 13, color: 'var(--text-light)', textDecoration: 'none' }}>⚙️ Settings</Link>
+        <Link href="/settings" style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '10px 14px', borderRadius: 12, fontSize: 13, color: 'var(--text-light)', textDecoration: 'none' }}>
+          ⚙️ Settings
+        </Link>
       </div>
     </nav>
   )

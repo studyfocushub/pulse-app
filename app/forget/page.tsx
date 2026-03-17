@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Sidebar } from '../log/page'
+import { Sidebar } from '@/components/Sidebar'
 import Cursor from '@/components/Cursor'
 import Link from 'next/link'
 
